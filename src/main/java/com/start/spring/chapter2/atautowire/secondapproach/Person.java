@@ -1,34 +1,41 @@
-package com.start.spring.chapter2.atautowire.secondapproach;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-
-@Component
-public class Person {
-
-	@Value("2nd - Aziz")
-	private String name;
-	
-	private Parrot parrot;
-	
-	@Autowired
-	public Person(Parrot parrot) {
-		this.parrot = parrot;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	@Override
-	public String toString() {
-		return "Person [name=" + name + " has " + parrot + "]";
-	}
-	
-	
-}
+//package com.start.spring.chapter2.atautowire.secondapproach;
+//
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Value;
+//import org.springframework.stereotype.Component;
+//
+//@Component
+//public class Person {
+//	
+//	private static int counter = 0;
+//	
+//	public Person() {
+//		counter++;
+//		System.out.println("Person Objects : "+ counter);
+//	}
+//
+//	@Value("2nd - Aziz")
+//	private String name;
+//	
+//	private Parrot parrot;
+//	
+//	@Autowired
+//	public Person(Parrot parrot) {
+//		this.parrot = parrot;
+//	}
+//
+//	public String getName() {
+//		return name;
+//	}
+//
+//	public void setName(String name) {
+//		this.name = name;
+//	}
+//
+//	@Override
+//	public String toString() {
+//		return "Person [name=" + name + " has " + parrot + "]";
+//	}
+//	
+//	
+//}
